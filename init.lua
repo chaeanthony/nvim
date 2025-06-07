@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.o.tabstop = 2
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
