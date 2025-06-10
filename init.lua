@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+require("config.keymaps")
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
@@ -606,7 +606,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				-- ts_ls = {},
+				ts_ls = {},
 				--
 
 				lua_ls = {
