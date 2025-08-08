@@ -1,5 +1,5 @@
 return {
-  cmd = { "pyright-langserver" },
+  cmd = { "pyright-langserver", "--stdio" },
   filetypes = { "python" },
   root_markers = { "pyproject.toml", ".git" },
   settings = {
@@ -9,7 +9,10 @@ return {
     },
     python = {
       analysis = {
-        ignore = { "*" }
+        -- Use Ruff for linting, Pyright for type checking
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = 'workspace',
       },
     },
   },
