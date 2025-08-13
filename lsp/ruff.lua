@@ -1,6 +1,6 @@
 return {
   cmd = { "ruff", "server" },
-  root_markers = { "pyproject.toml", ".git" },
+  root_markers = { "pyproject.toml", "requirements.txt", "setup.py", ".git" },
   
   workspace_required = true,
   init_options = {

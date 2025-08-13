@@ -1,4 +1,12 @@
-vim.lsp.enable({ "lua_ls", "ruff", "pyright", "gopls" })
+vim.lsp.enable({ "lua_ls", "pyright", "gopls" })
+
+-- Enable ruff only for Python files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.lsp.enable("ruff")
+  end,
+})
 
 -- Additional autocmd to handle Ruff-specific capabilities
 vim.api.nvim_create_autocmd("LspAttach", {
